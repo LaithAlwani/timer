@@ -50,8 +50,7 @@
     function startWorkout() {
         if(set > totalSets){
             
-            alert("workout has ended");
-            
+            endOfWorkout(); 
         }
         else{
             var newCounter = moveTime;
@@ -100,6 +99,13 @@
        
 
     }
+
+    function endOfWorkout(){
+        changeDisplay($("#workout-display"),"none");
+        changeDisplay($("#end"), "block");
+    }
+        
+
 
     function formatTime(s){
         
